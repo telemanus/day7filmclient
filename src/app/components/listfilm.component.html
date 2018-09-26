@@ -2,7 +2,9 @@
 <div fxLayout="column">
 
     <!--  <div *ngIf="albumList==0"><h3>Start Your Collection</h3></div>
-   -->  {{filmResult}}
+   -->  
+   
+   <!-- {{passResult}} -->
   
   <!--
    <div *ngIf="film == 0">
@@ -12,9 +14,8 @@
 
     <h1>Hello</h1>
   
-    <div class="container" fxLayout="row" fxLayoutAlign="start" *ngFor="let i of this.filmResult">
+    <div class="container" fxLayout="row" fxLayoutAlign="start" *ngFor="let i of passResult">
       <mat-card>
-        <div fxFlex=50% fxLayoutGap=60px>{{ i }}</div>
         <div fxFlex=30%>{{ i.film_id }}</div>
         <div fxFlex=20%>{{ i.title }}</div>
       </mat-card>

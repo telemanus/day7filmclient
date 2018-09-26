@@ -14,14 +14,12 @@ export class ListfilmComponent implements OnInit {
 
 
   @Input()
-  filmResult : any; 
+  //filmResult : string[]; 
+  passResult : string[];
 
   constructor() { }
 
   ngOnInit() {
   }
 
-  clicked() {
-  console.log(this.filmResult);
-  };
 }

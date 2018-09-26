@@ -14,7 +14,7 @@ export interface filmList {
 })
 export class AppComponent {
   title = 'day7filmclient';
-  filmResult:string[] = [];
+  filmResult:string[];
 
   myFilmList: filmList[] = [
     { film_id: 1, title: "Star Wars", rating: "PG13" },
@@ -22,22 +22,22 @@ export class AppComponent {
   ];
 
   @Input()
-  film: any =[];
+  film: any;
 
-  /*
+  
   @Output()
-  passResult = new EventEmitter();
-  */
+  //passResult = new EventEmitter();
+  
 
-
+ 
   propagateList(film: any) {
     console.log (">>> Films Found: ", film);     
 
-    this.filmResult=film;
+    this.filmResult=Object.values(film);
 
     console.log(">> this.filmResult<< ", this.filmResult);
 
-    return this.filmResult;
+  //  return this.filmResult;
     }
 
 }
